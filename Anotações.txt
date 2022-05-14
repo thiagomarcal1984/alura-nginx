@@ -43,3 +43,15 @@ adulto na rede local, por exemplo.
 Definição de proxy reverso: um servidor que redireciona as requisições que 
 recebe da internet para outros computadores da rede local. O proxy reverso 
 pode fazer redirecionamento, balanceamento de carga, verificar cache etc.
+
+O nível location dentro de server pode receber por parâmetro uma RegEx. Ela
+é precedida de um til (~). Caso você queira que a RegEx seja case insensitive,
+use til e asterisco (~*).
+
+O comando proxy_pass (nível http/server/location) precisa de um endereço com 
+o protocolo, senão nginx não entende. Ex.: 
+server {
+    location ~* \.php$ {
+        proxy_pass http://php-server;
+    }
+}

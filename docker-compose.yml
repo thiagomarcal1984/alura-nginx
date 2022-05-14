@@ -13,6 +13,13 @@ services:
     container_name: nginx
     networks:
       - rede
+  php-server: # Nome na rede interna.
+    image: php:7-apache
+    volumes: 
+      - ./php:/var/www/html
+    container_name: php # Nome no controle do docker.
+    networks:
+      - rede
 
 networks:
   rede:
