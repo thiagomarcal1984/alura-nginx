@@ -1,0 +1,21 @@
+#Comando para buscar ajuda do nginx.
+$ nginx -h 
+
+Com esse help, é possível achar a pasta onde os arquivos de configuração
+estão localizados. No container docker, o caminho é /etc/nginx.
+
+Dentro de /etc/nginx há o arquivo nginx.conf. Alguns dos parâmetros que
+estão no arquivo:
+    * worker_connections (nível raiz): máximo de conexões que cada 
+      worker process pode ter.
+    * worker_processes (nível events): número de colaboradores. Geralmente
+      coincide com o número de núcleos do processador.
+    * listen (nível http/server): porta onde o servidor escuta.
+    * server_name (nível http/server): nome do domínio do servidor. Em teste
+      escrevemos o localhost mesmo.
+    * root (nível http/server/location (caminho)): diretório onde estarão
+      os arquivos para serem servidos.
+    * index (nível http/server/location (caminho)): lista de arquivos que
+      servirão de index para o caminho especificado.
+    * include (nível http): caminho onde estarão os arquivos de configuração
+      complementares.
