@@ -55,3 +55,8 @@ server {
         proxy_pass http://php-server;
     }
 }
+
+
+É importante acrescentar a barra ao final do endereço fornecido no comando
+proxy_pass. Senão, ao redirecionar a requisição para um serviço, o proxy 
+reverso passa um caminho maior para o serviço que vai responder.
