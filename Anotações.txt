@@ -19,3 +19,6 @@ estão no arquivo:
       servirão de index para o caminho especificado.
     * include (nível http): caminho onde estarão os arquivos de configuração
       complementares.
+
+Os arquivos de configuração incluídos pelo nginx.conf podem começar com o 
+nível server. Veja o exepmlo do arquivo default.conf.

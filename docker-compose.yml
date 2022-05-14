@@ -4,10 +4,12 @@ services:
   nginx:
     image: nginx
     ports:
-      - 80:80
+      - 80:80 # Porta usada pelo arquivo default.conf.
+      - 8080:8080 # Porta usada pelo arquivo nginx.conf.
     volumes:
       - ./arquivos:/arquivos
       - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./default.conf:/etc/nginx/conf.d/default.conf
     container_name: nginx
     networks:
       - rede
