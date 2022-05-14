@@ -36,3 +36,10 @@ de configuração.
 #Comando para testar a sintaxe do arquivo nginx.conf.
 $ nginx -t
 
+Definição de proxy: um servidor que filtra as requisições da rede local 
+para a internet. Serve para bloquear redes sociais e sites de conteúdo 
+adulto na rede local, por exemplo.
+
+Definição de proxy reverso: um servidor que redireciona as requisições que 
+recebe da internet para outros computadores da rede local. O proxy reverso 
+pode fazer redirecionamento, balanceamento de carga, verificar cache etc.
