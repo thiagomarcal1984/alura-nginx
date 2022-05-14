@@ -15,6 +15,8 @@ estão no arquivo:
       escrevemos o localhost mesmo.
     * root (nível http/server/location (caminho)): diretório onde estarão
       os arquivos para serem servidos.
+    * error_page (nível http/server (números dos erros HTTP)): define a 
+      página de erro correspondente aos códigos HTTP anotados.
     * index (nível http/server/location (caminho)): lista de arquivos que
       servirão de index para o caminho especificado.
     * include (nível http): caminho onde estarão os arquivos de configuração
