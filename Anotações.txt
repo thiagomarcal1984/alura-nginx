@@ -22,3 +22,15 @@ estão no arquivo:
 
 Os arquivos de configuração incluídos pelo nginx.conf podem começar com o 
 nível server. Veja o exepmlo do arquivo default.conf.
+
+
+#Comando para enviar o sinal de recarregamento do nginx.
+$ nginx -s reload
+
+Sem esse comando, o nginx não vai reconhecer as alterações nos arquivos 
+de configuração.
+
+
+#Comando para testar a sintaxe do arquivo nginx.conf.
+$ nginx -t
+
