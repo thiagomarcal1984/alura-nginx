@@ -14,6 +14,7 @@ services:
       - ./nginx.conf:/etc/nginx/nginx.conf
       - ./conf.d:/etc/nginx/conf.d
       - ./servicos:/servicos
+      - ./logs:/etc/nginx/logs # Esta pasta não existiria no container.
     container_name: nginx
     networks:
       - rede
