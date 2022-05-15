@@ -94,3 +94,7 @@ Exemplo de configuração:
             proxy_pass http://servicos; 
         }
     }
+
+
+É possível nomear os formatos de log com o comando log_format (grupo http)
+e atribui-los a cada server com o comando access_log (grupo server). 
