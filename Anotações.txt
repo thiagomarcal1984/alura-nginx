@@ -98,3 +98,15 @@ Exemplo de configuração:
 
 É possível nomear os formatos de log com o comando log_format (grupo http)
 e atribui-los a cada server com o comando access_log (grupo server). 
+
+
+É necessário acrescentar às requisições HTTP cabeçalhos com informações
+do IP real do host que está atendendo a requisição. Do contrário, sempre
+será registrado no log o IP do proxy reverso.
+
+Cabeçalhos HTTP personalizados sempre se iniciam com X-. Lembre-se disso
+quando for acrescentar cabeçalhos fora da especificação.
+
+O nginx captura o conteúdo do cabeçalho HTTP, por meio do prefixo $http_*.
+Exemplo: se a requisição tiver o header X-Real-IP, ele pode ser recuperado
+com a variável $http_x_real_ip.
